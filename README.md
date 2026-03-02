@@ -14,11 +14,11 @@ Sublytics busca resolver tres problemas concretos: el gasto invisible acumulado,
 
 El prototipo está planteado como una aplicación web estructurada en varias vistas estáticas que simulan el flujo principal del producto.
 
-* **index.html:** Es el dashboard central. Representa la vista principal donde el usuario ve de un vistazo su gasto total (mensual/anual), el próximo pago más cercano y una lista resumida de sus suscripciones activas con indicadores visuales de uso.
+* **index.html:** Simula la pantalla de acceso de usuario. Permite introducir credenciales y representa el punto de entrada al dashboard privado.
 
-* **login.html:** Simula la pantalla de acceso de usuario. Permite introducir credenciales y representa el punto de entrada al dashboard privado.
+* **dashboard.html:** Es el dashboard central. Representa la vista principal donde el usuario ve de un vistazo su gasto total (mensual/anual), el próximo pago más cercano y una lista resumida de sus suscripciones activas con indicadores visuales de uso.
 
-* **product.html:** Vista detallada de una suscripción específica. En esta pantalla se muestra el histórico de pagos de un servicio concreto (ej. Netflix o Adobe Creative Cloud), la fecha de la próxima renovación del servcio y posibles acciones como cancelar o editar una suscripción.
+* **subscription.html:** Vista detallada de una suscripción específica. En esta pantalla se muestra el histórico de pagos de un servicio concreto (ej. Netflix o Adobe Creative Cloud), la fecha de la próxima renovación del servcio y posibles acciones como cancelar o editar una suscripción.
 
 La navegación entre vistas se realiza mediante enlaces internos que replican el flujo natural de uso de la aplicación (Login → Dashboard → Product).
 
