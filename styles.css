@@ -1,3 +1,4 @@
+/* CSS Reset */
 *,
 *::before,
 *::after {
@@ -7,6 +8,173 @@
 }
 
 :root {
-    --blue: #005EB8;
-    --white: #FFFFFF;
+    --color-blue: #005EB8;
+    --color-sky: #2196F3;
+    --color-white: #FCFCFC;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    color: var(--color-white);
+    background: var(--color-blue);
+    font-family: 'Google Sans';
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(var(--color-blue), var(--color-sky));
+}
+
+/* ===================== MAIN ===================== */
+
+.app {
+    margin: auto;
+    gap: 6rem;
+    height: 75%;
+    display: flex;
+    padding: 24px 24px;
+    justify-content: space-between;
+
+    border-radius: 15px;
+    border: 1px solid var(--color-white);
+    background: var(--color-blue);
+}
+
+/* ==== Section description ==== */
+
+.app__description {
+    display: flex;
+    flex-direction: column;
+}
+
+.description__name {
+    display: flex;
+    align-items: flex-end;
+}
+
+.description__image {
+    max-width: 128px;
+    max-height: 128px;
+    aspect-ratio: 1 / 1;
+}
+
+.name__lytics {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-left: -10px;
+    padding-bottom: 14px;
+    letter-spacing: 15px;
+}
+
+.description__explain {
+    max-width: 482px;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    padding-left: 32px;
+    padding-top: 14px;
+    text-wrap: pretty;
+    padding-bottom: 14px;
+}
+
+/* ==== Form ==== */
+
+.login__form {
+    width: 400px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+    padding-top: 33px;
+}
+
+.label__user,
+.label_password {
+    font-size: larger;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.input__user,
+.input__password {
+    border: 0px;
+    margin: 10px;
+    width: calc(100% - 10px - 10px);
+    border-radius: 15px;
+    corner-shape: squircle;
+    padding: 10px;
+    font-size: 16px;
+    color: #005EB8;
+    font-weight: 500;
+    font-family: var(--font-family);
+    outline: var(--color-white);
+    border: 1px solid var(--color-white);
+
+}
+
+.form__button {
+    border: 0px;
+    margin: 25px auto 0px;
+    color: var(--color-blue);
+    background: var(--color-white);
+    padding: 10px;
+    width: calc(100% - 10px - 10px);
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: var(--font-family);
+    transition: transform 300ms ease-in-out,
+        box-shadow 300ms ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px 1px white;
+    }
+}
+
+/* Media queries (min.width: 1024px)*/
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-blue: #FFFFFF;
+        --color-white: #005EB8;
+    }
+}
+
+/* 2. Estilos que se AÑADEN para pantallas más grandes */
+@media (width<=1024px) {
+    .app {
+        flex-direction: column;
+        gap: 0rem;
+        margin: 25px auto;
+    }
+
+    .login__form {
+        width: 100%;
+    }
+
+    .description__explain {
+        padding-left: 10px;
+    }
+}
+
+@media (width <=540px) {
+    .name__lytics {
+        letter-spacing: 0px;
+        padding-bottom: 6px;
+        font-size: 2rem;
+    }
+
+    .description__image {
+        max-width: 64px;
+        max-height: 64px;
+    }
+
+    .description__explain {
+        font-size: 1.2rem;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
 }
