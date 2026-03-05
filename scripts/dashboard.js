@@ -29,7 +29,13 @@ $menuBtn.addEventListener('click', () => {
 const $modal = document.querySelector('.nav__dialog');
 const $form = document.querySelector('.dialog__form');
 
+const $easterEgg = document.querySelector('.easter-egg');
+
 $form.addEventListener('submit', () => {
+    if ($easterEgg && $easterEgg.hasAttribute('hidden')) {
+        $easterEgg.removeAttribute('hidden');
+    }
+
     const formData = new FormData($form);
     const data = Object.fromEntries(formData.entries());
 
