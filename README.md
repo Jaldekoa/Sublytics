@@ -59,21 +59,24 @@ El desarrollo del prototipo se ha planteado con un enfoque simple y estructurado
 ```text
 .
 ├── assets/                       # Recursos visuales y logotipos
-│   ├── BasicFit.png
-│   ├── ChatGPT.png
+│   ├── Amazon.webp
+│   ├── BasicFit.webp
+│   ├── ChatGPT.webp
 │   ├── DAZN.webp
 │   ├── favicon.webp
 │   ├── Netflix.webp
-│   ├── OVH.png
-│   ├── Spotify.png
+│   ├── OVH.webp
+│   ├── Spotify.webp
 │   ├── Sublytics Social Preview.jpg
-│   └── Youtube.png
+│   └── Youtube.webp
 ├── scripts/                      # Lógica de las vistas
 │   ├── dashboard.js
-│   └── index.js
+│   ├── index.js
+│   └── subscription.js
 ├── styles/                       # Hojas de estilo CSS
 │   ├── dashboard.css
-│   └── styles.css
+│   ├── styles.css
+│   └── subscription.css
 ├── dashboard.html                # Vista principal del panel
 ├── index.html                    # Pantalla de acceso
 ├── README.md                     # Documentación del proyecto
