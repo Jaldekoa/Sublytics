@@ -1,5 +1,5 @@
 const form = document.querySelector('.login__form');
 
-form.addEventListener('submit', function (event) {
+form.addEventListener('submit', () => {
     if (!form.checkValidity()) return;
 });
