@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
 const $menuBtn = document.querySelector('.btn-menu');
 const $mainNav = document.getElementById('main-navigation');
 
-menuBtn.addEventListener('click', () => {
+$menuBtn.addEventListener('click', () => {
     const isHidden = mainNav.hidden;
 
     if (isHidden) {
