@@ -24,10 +24,26 @@ El prototipo está planteado como una aplicación web estructurada en varias vis
 
 La navegación entre vistas se realiza mediante enlaces internos que replican el flujo natural de uso de la aplicación (Login → Dashboard → Product).
 
+<center>
+
+```mermaid
+graph TD
+    A[index.html <br/><b>Acceso</b>] -->|Login Simulado| B(dashboard.html <br/><b>Panel Central</b>)
+    B -->|Click en Suscripción| C(subscription.html <br/><b>Detalles y Gestión</b>)
+    C -->|Volver| B
+    
+    style A fill:#314CB6,stroke:#333,stroke-width:2px,color:#FFF
+    style B fill:#A4BFEB,stroke:#333,stroke-width:2px,color:#000
+    style C fill:#A4BFEB,stroke:#333,stroke-width:2px,color:#000
+```
+
+</center>
+
 ## Tecnologías Utilizadas
 
 ![HTML](https://img.shields.io/badge/HTML5-%23E34F26?style=flat&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS3-%23663399?style=flat&logo=css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-%23F7E018?style=flat&logo=javascript&logoColor=white)
 
 ## Enfoque Técnico
 
@@ -39,6 +55,31 @@ El desarrollo del prototipo se ha planteado con un enfoque simple y estructurado
 * Uso estratégico de `position` (relative, absolute) para elementos decorativos y componentes interactivos.
 * Organización del CSS mediante variables personalizadas (`:root`) para mantener coherencia visual y facilitar futuras escalabilidades.
 
+## Árbol de archivos
+```text
+.
+├── assets/                       # Recursos visuales y logotipos
+│   ├── BasicFit.png
+│   ├── ChatGPT.png
+│   ├── DAZN.webp
+│   ├── favicon.webp
+│   ├── Netflix.webp
+│   ├── OVH.png
+│   ├── Spotify.png
+│   ├── Sublytics Social Preview.jpg
+│   └── Youtube.png
+├── scripts/                      # Lógica de las vistas
+│   ├── dashboard.js
+│   └── index.js
+├── styles/                       # Hojas de estilo CSS
+│   ├── dashboard.css
+│   └── styles.css
+├── dashboard.html                # Vista principal del panel
+├── index.html                    # Pantalla de acceso
+├── README.md                     # Documentación del proyecto
+└── subscription.html             # Detalle de suscripción individual
+```
+
 ## Roadmap (Visión de Producto)
 
 Aunque el prototipo actual es estático, la visión del producto incluye:
@@ -47,6 +88,23 @@ Aunque el prototipo actual es estático, la visión del producto incluye:
 * Sistema de alertas 7–14 días antes de cada renovación.
 * Cancelación de suscripciones *in-app*.
 * Generación de tarjetas virtuales para nuevos servicios.
+
+<center>
+
+```mermaid
+gantt
+    title Roadmap de Desarrollo Sublytics
+    dateFormat  YYYY-MM-DD
+    section Fase Actual
+    Prototipo HTML/CSS :done, des1, 2026-02-23, 2026-03-06
+    section Fase 2
+    Interactividad con JS :active, des2, 2026-03-06, 21d
+    section Fase 3
+    Backend y Base de Datos : des3, after des2, 30d
+    Alertas Push : des4, after des3, 14d
+```
+
+</center>
 
 ## Autor
 

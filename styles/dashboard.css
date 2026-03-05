@@ -12,14 +12,14 @@
     --color-sky: #2196F3;
     --color-white: #FCFCFC;
     --min-app-width: 50%;
-    --max-app-width: 100%;
+    --max-app-width: 50%;
     --header-height: 120px;
 }
 
 body {
     min-height: 100dvh;
     margin: 0 auto;
-    width: clamp(var(--min-app-width), 70dvw, var(--max-app-width));
+    width: clamp(50vw, 70vw, 90vw);
     color: var(--color-white);
     background: var(--color-blue);
     font-family: 'Google Sans';
