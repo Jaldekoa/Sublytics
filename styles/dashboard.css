@@ -117,7 +117,7 @@ header h1 {
 .card {
     background: var(--color-white);
     border-radius: 15px;
-    transition: all ease-in-out 100ms;
+    transition: all ease-in-out 300ms;
     cursor: pointer;
 }
 
