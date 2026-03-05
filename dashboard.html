@@ -29,7 +29,7 @@
         <nav id="main-navigation" class="main-nav" hidden>
             <ul>
                 <li class="username">Bienvenido</li>
-                <li><a href="/subscription.html">Añadir suscripción</a></li>
+                <li><button commandfor="myDialog" command="show-modal">Añadir suscripción</button></li>
                 <li><a href="/">Cerrar sesión</a></li>
             </ul>
         </nav>
@@ -203,6 +203,36 @@
                 </div>
             </a>
         </article>
+
+        <dialog class="nav__dialog" id="myDialog" closedby="any">
+            <h2>Añadir una suscripción</h2>
+            <p>Introduce los datos necesarios</p>
+            <form method="dialog" class="dialog__form">
+                <label class="label__title" for="title">Nueva suscripción</label>
+                <input class="input__title" type="text" id="title" name="title" required>
+
+                <label class="label__category" for="category">Categoría</label>
+                <select name="category">
+                    <option value="Entretenimiento" selected>Entretenimiento</option>
+                    <option value="Productividad">Productividad</option>
+                    <option value="Profesional">Profesional</option>
+                    <option value="Salud">Salud</option>
+                </select>
+
+                <label class="label__period" for="period">Renovación</label>
+                <select name="period">
+                    <option value="Mensual" selected>Mensual</option>
+                    <option value="Anual">Anual</option>
+                </select>
+
+                <label class="label__price" for="price">Precio</label>
+                <input class="input__price" type="number" min="0.00" step="any" id="price" name="price" required>
+
+                <button class="form__button" type="submit">Añadir</button>
+                <button class="from__close" type="button" commandfor="myDialog" command="close">Cerrar sin
+                    guardar</button>
+            </form>
+        </dialog>
 
     </main>
 
